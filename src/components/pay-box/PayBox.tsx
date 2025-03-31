@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, Grid2, Paper, Button } from "@mui/material";
+import { Box, Stack, Typography, Grid2, Button } from "@mui/material";
 import { DenominationResponse } from "../../client/withdrawal-client";
 import NoteBox from "./NoteBox";
 import CoinBox from "./CoinBox";

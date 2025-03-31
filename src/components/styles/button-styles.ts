@@ -15,7 +15,8 @@ export const roundButtonStyle = {
   transition: "all 0.2s ease-in-out",
   "&:hover": {
     backgroundColor: "white", // White background on hover
-    color: (theme) => theme.palette.primary.main, // Original button color on hover
+    color: (theme: { palette: { primary: { main: string } } }) =>
+      theme.palette.primary.main,
     boxShadow: "none",
     "& img": {
       filter: "invert(1)", // Invert icon color on hover
@@ -40,11 +41,13 @@ export const submitButtonStyle = {
   transition: "all 0.2s ease-in-out",
   "&:hover": {
     backgroundColor: "white", // White background on hover
-    color: (theme) => theme.palette.primary.main, // Original button color on hover
+    color: (theme: { palette: { primary: { main: string } } }) =>
+      theme.palette.primary.main,
     boxShadow: "none",
   },
   "&.Mui-disabled": {
-    backgroundColor: (theme) => theme.palette.primary.main, // Keep same background color
+    backgroundColor: (theme: { palette: { primary: { main: string } } }) =>
+      theme.palette.primary.main, // Keep same background color
     color: "rgba(255, 255, 255, 0.6)", // Slightly greyed white text
     border: "1px solid white", // Slightly greyed border
     opacity: 1, // Prevent the default opacity reduction
